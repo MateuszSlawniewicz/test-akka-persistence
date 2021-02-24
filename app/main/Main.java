@@ -11,7 +11,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-
         ActorSystem actorSystem = ActorSystem.create("tests");
       ActorRef exampleActor = actorSystem.actorOf(Props.create(ExamplePersistentActor.class));
       Scanner scan = new Scanner(System.in);

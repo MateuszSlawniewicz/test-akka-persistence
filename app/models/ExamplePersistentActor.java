@@ -1,6 +1,7 @@
 package models;
 
 
+import akka.japi.Procedure;
 import akka.persistence.AbstractPersistentActor;
 import akka.persistence.SnapshotOffer;
 
@@ -41,7 +42,12 @@ public class ExamplePersistentActor extends AbstractPersistentActor {
                 } )
                 .build();
     }
-
+//todo test of persistAll
+//    private Procedure<Eve> procedure =  param-> {
+//        state = param.addItem(param.data);
+//        getContext().getSystem().getEventStream().publish(param);
+//        saveSnapshot(param.copy());
+//    }
     @Override
     public Receive createReceive() {
         return receiveBuilder()
